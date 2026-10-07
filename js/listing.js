@@ -11,7 +11,7 @@ function detailHTML(item) {
     `Habari ${item.name}! I found you on Tanzania Pulse (AFCON 2027) and I'd like to enquire about availability.`
   );
   const waLink = `https://wa.me/${item.phone.replace(/[^0-9]/g, "")}?text=${waText}`;
-  const initial = item.name.trim().charAt(0).toUpperCase();
+  const glyph = CAT_ICONS[item.category] || "•";
 
   return `
     <div class="detail-hero">
@@ -28,7 +28,7 @@ function detailHTML(item) {
     </div>
 
     <div class="container">
-      <div class="detail-banner cover-art cover--${item.category}" data-mark="${initial}" aria-hidden="true"></div>
+      <div class="detail-banner cover-art cover--${item.category}" data-mark="${glyph}" aria-hidden="true"></div>
 
       <div class="detail-layout">
         <div class="detail-main">
