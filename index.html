@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanzania Pulse — Book Hotels, Apartments & Transport for AFCON 2027</title>
+  <meta name="description" content="Tanzania Pulse connects AFCON 2027 visitors with verified hotels, apartments and transport services in Arusha. Enquire and book directly on WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 4 12 3-9 2 3h5" fill="none" stroke="#FCD116" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Tanzania<span class="accent">Pulse</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+        <a href="listings.html" data-i18n="nav_listings">Listings</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="submit.html" class="nav-cta" data-i18n="nav_submit">List your business</a>
+        <button class="lang-toggle" id="langToggle" type="button">SW</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="hero-badge">AFCON 2027 · Tanzania</span>
+        <h1 data-i18n="hero_title">Feel the <span class="pop">pulse</span> of Arusha</h1>
+        <p class="lead" data-i18n="hero_lead">Hotels, apartments and transport for AFCON 2027 visitors — all in one place. Browse verified local services and reach them directly on WhatsApp.</p>
+
+        <svg class="pulse-line" viewBox="0 0 420 46" aria-hidden="true">
+          <path d="M0 23h60l14-17 12 34 16-30 14 13h48l12-9 10 18 14-9h50l16-21 14 42 16-21h74" />
+        </svg>
+
+        <div class="hero-stats">
+          <div class="stat"><strong id="statCount">9+</strong><span data-i18n="stat_services">Services listed</span></div>
+          <div class="stat"><strong>100%</strong><span data-i18n="stat_free">Free to browse</span></div>
+          <div class="stat"><strong>0 fees</strong><span data-i18n="stat_fees">No booking fees</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container search-wrap">
+      <form class="search-bar" id="homeSearch">
+        <input type="text" name="q" id="homeSearchInput" data-i18n-placeholder="search_ph" placeholder="Search by name, area or service…" autocomplete="off" />
+        <select name="cat" id="homeSearchCat" aria-label="Category">
+          <option value="all" data-i18n="cat_all">All categories</option>
+          <option value="hotel" data-i18n="cat_hotel">Hotels</option>
+          <option value="apartment" data-i18n="cat_apartment">Apartments</option>
+          <option value="transport" data-i18n="cat_transport">Transport</option>
+          <option value="restaurant" data-i18n="cat_restaurant">Restaurants</option>
+          <option value="experience" data-i18n="cat_experience">Experiences</option>
+        </select>
+        <button class="btn btn-yellow" type="submit" data-i18n="search_btn">Search</button>
+      </form>
+    </div>
+
+    <section id="categories">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow" data-i18n="cat_eyebrow">What are you looking for?</span>
+            <h2 data-i18n="cat_title">Pick a category</h2>
+          </div>
+        </div>
+        <div class="categories">
+          <a class="cat-card" href="hotels.html" style="--cat-color:#087A6A">
+            <span class="icon">🏨</span>
+            <h3 data-i18n="cat_hotel">Hotels</h3>
+            <p data-i18n="cat_hotel_desc">City hotels and lodges with breakfast, pools and match-day transfers.</p>
+          </a>
+          <a class="cat-card" href="apartments.html" style="--cat-color:#1B5E7A">
+            <span class="icon">🛋️</span>
+            <h3 data-i18n="cat_apartment">Apartments</h3>
+            <p data-i18n="cat_apartment_desc">Self-catering stays for fans and groups who want their own space.</p>
+          </a>
+          <a class="cat-card" href="transport.html" style="--cat-color:#D9A441">
+            <span class="icon">🚐</span>
+            <h3 data-i18n="cat_transport">Transport</h3>
+            <p data-i18n="cat_transport_desc">Airport pickups, safari shuttles, boda-boda and stadium routes.</p>
+          </a>
+          <a class="cat-card" href="eat.html" style="--cat-color:#C0392B">
+            <span class="icon">🍽️</span>
+            <h3 data-i18n="cat_restaurant">Restaurants</h3>
+            <p data-i18n="cat_restaurant_desc">Grills, coffee houses and rooftops — where fans and locals actually eat.</p>
+          </a>
+          <a class="cat-card" href="experiences.html" style="--cat-color:#111111">
+            <span class="icon">🦁</span>
+            <h3 data-i18n="cat_experience">Experiences</h3>
+            <p data-i18n="cat_experience_desc">Safaris, Kilimanjaro hikes and cultural trips — things to do between matches.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" style="padding-top:1rem">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow" data-i18n="feat_eyebrow">Popular right now</span>
+            <h2 data-i18n="feat_title">Featured services</h2>
+          </div>
+          <a class="btn btn-outline" href="listings.html" data-i18n="feat_viewall">View all listings</a>
+        </div>
+        <div class="listings-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="container">
+        <span class="eyebrow" data-i18n="why_eyebrow">Why Tanzania Pulse</span>
+        <h2 style="font-size:clamp(1.7rem,4vw,2.4rem);font-weight:900;text-transform:uppercase;margin-top:0.3rem" data-i18n="why_title">Built for match day</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <span class="num">01</span>
+            <h3 data-i18n="why_1_t">No booking fees</h3>
+            <p data-i18n="why_1_d">You contact the business directly — WhatsApp or call. We never add a hidden charge to your stay or ride.</p>
+          </div>
+          <div class="why-card">
+            <span class="num">02</span>
+            <h3 data-i18n="why_2_t">Local & verified</h3>
+            <p data-i18n="why_2_d">Every listing is a real Arusha business. We verify locations, photos and contacts before publishing.</p>
+          </div>
+          <div class="why-card">
+            <span class="num">03</span>
+            <h3 data-i18n="why_3_t">EN & SW friendly</h3>
+            <p data-i18n="why_3_d">Browse in English or Kiswahili. Local hosts and international fans speak the same language here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="owners">
+      <div class="container">
+        <div class="owner-cta">
+          <div>
+            <h2 data-i18n="owner_title">Own a hotel, apartment or fleet in Arusha?</h2>
+            <p data-i18n="owner_desc">Get listed on Tanzania Pulse before AFCON 2027 and reach thousands of visiting fans. Early listings are completely free.</p>
+          </div>
+          <a class="btn btn-dark" href="submit.html" data-i18n="owner_btn">Get listed free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom:0.8rem">
+            <span class="logo-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 4 12 3-9 2 3h5" fill="none" stroke="#FCD116" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Tanzania<span class="accent">Pulse</span>
+          </a>
+          <p data-i18n="footer_tag">The visitor platform for AFCON 2027. Hotels, apartments and transport across Arusha.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer_explore">Explore</h4>
+          <a href="hotels.html" data-i18n="cat_hotel">Hotels</a>
+          <a href="apartments.html" data-i18n="cat_apartment">Apartments</a>
+          <a href="transport.html" data-i18n="cat_transport">Transport</a>
+          <a href="eat.html" data-i18n="cat_restaurant">Restaurants</a>
+          <a href="experiences.html" data-i18n="cat_experience">Experiences</a>
+          <a href="listings.html" data-i18n="nav_listings">Listings</a>
+        </div>
+        <div>
+          <h4 data-i18n="footer_business">For business</h4>
+          <a href="submit.html" data-i18n="nav_submit">List your business</a>
+          <a href="about.html" data-i18n="nav_about">About</a>
+          <a href="contact.html" data-i18n="footer_contact">Contact us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Tanzania Pulse</span>
+        <span>Arusha, Tanzania · AFCON 2027</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/listings.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const featured = LISTINGS.filter((l) => l.featured).slice(0, 6);
+      renderCards(document.getElementById("featuredGrid"), featured);
+
+      const stat = document.getElementById("statCount");
+      if (stat) stat.textContent = LISTINGS.length + "+";
+
+      document.getElementById("homeSearch").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const q = encodeURIComponent(document.getElementById("homeSearchInput").value.trim());
+        const cat = document.getElementById("homeSearchCat").value;
+        location.href = `listings.html?q=${q}&cat=${cat}`;
+      });
+    });
+    document.addEventListener("rerender", () => {
+      renderCards(document.getElementById("featuredGrid"), LISTINGS.filter((l) => l.featured).slice(0, 6));
+    });
+  </script>
+</body>
+</html>

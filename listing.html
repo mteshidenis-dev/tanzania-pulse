@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listing — Tanzania Pulse</title>
+  <meta name="description" content="Service details on Tanzania Pulse — hotels, apartments and transport in Arusha for AFCON 2027." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 4 12 3-9 2 3h5" fill="none" stroke="#FCD116" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Tanzania<span class="accent">Pulse</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="listings.html" data-i18n="nav_listings">Listings</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="submit.html" class="nav-cta" data-i18n="nav_submit">List your business</a>
+        <button class="lang-toggle" id="langToggle" type="button">SW</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="detailRoot"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="margin-top:0;border-top:none;padding-top:0">
+        <span>© 2026 Tanzania Pulse</span>
+        <span>Arusha, Tanzania · AFCON 2027</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/listings.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/listing.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List Your Business — Tanzania Pulse</title>
+  <meta name="description" content="Get your Arusha hotel, apartment or transport business listed on Tanzania Pulse — free during launch, in front of AFCON 2027 visitors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 4 12 3-9 2 3h5" fill="none" stroke="#FCD116" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Tanzania<span class="accent">Pulse</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="listings.html" data-i18n="nav_listings">Listings</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="submit.html" class="nav-cta active" data-i18n="nav_submit">List your business</a>
+        <button class="lang-toggle" id="langToggle" type="button">SW</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow" data-i18n="submit_eyebrow">For business owners</span>
+        <h1 data-i18n="submit_title">List your business</h1>
+        <p data-i18n="submit_lead">Hotels, apartments and transport operators in Arusha — get in front of AFCON 2027 visitors. Free during launch.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col">
+        <div class="prose" style="margin-top:0">
+          <h2 style="margin-top:0" data-i18n="why_title">Built for match day</h2>
+          <p data-i18n="owner_desc">Get listed on Tanzania Pulse before AFCON 2027 and reach thousands of visiting fans. Early listings are completely free.</p>
+          <p data-i18n="why_2_d">Every listing is a real Arusha business. We verify locations, photos and contacts before publishing.</p>
+          <ul class="amenity-list" style="margin-top:1.2rem">
+            <li data-i18n="stat_free">Free to browse</li>
+            <li data-i18n="stat_fees">No booking fees</li>
+            <li data-i18n="why_3_t">EN & SW friendly</li>
+          </ul>
+        </div>
+
+        <form class="form-card" id="submitForm" novalidate>
+          <div class="form-row">
+            <label for="s_name" data-i18n="s_business">Business name</label>
+            <input type="text" id="s_name" name="s_name" required />
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="s_type" data-i18n="s_type">Business type</label>
+              <select id="s_type" name="s_type">
+                <option value="Hotel" data-i18n="cat_hotel">Hotels</option>
+                <option value="Apartment" data-i18n="cat_apartment">Apartments</option>
+                <option value="Transport" data-i18n="cat_transport">Transport</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="s_location" data-i18n="s_location">Location / area in Arusha</label>
+              <input type="text" id="s_location" name="s_location" />
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="s_phone" data-i18n="s_phone">Phone / WhatsApp number</label>
+              <input type="tel" id="s_phone" name="s_phone" required />
+            </div>
+            <div class="form-row">
+              <label for="s_email" data-i18n="s_email">Email address</label>
+              <input type="email" id="s_email" name="s_email" />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="s_website" data-i18n="s_website">Website or social link (optional)</label>
+            <input type="text" id="s_website" name="s_website" />
+          </div>
+          <div class="form-row">
+            <label for="s_desc" data-i18n="s_desc">Describe your business</label>
+            <textarea id="s_desc" name="s_desc" data-i18n-placeholder="s_desc_ph" placeholder="e.g. 12 rooms, 5 minutes from the clock tower, breakfast included…" required></textarea>
+          </div>
+          <div class="form-row">
+            <label data-i18n="s_features">Features to highlight</label>
+            <div class="check-grid">
+              <label><input type="checkbox" name="s_features" value="Wi-Fi" /> Wi-Fi</label>
+              <label><input type="checkbox" name="s_features" value="Parking" /> Parking</label>
+              <label><input type="checkbox" name="s_features" value="Breakfast" /> Breakfast</label>
+              <label><input type="checkbox" name="s_features" value="Air conditioning" /> AC</label>
+              <label><input type="checkbox" name="s_features" value="Pool" /> Pool</label>
+              <label><input type="checkbox" name="s_features" value="24/7 service" /> 24/7</label>
+            </div>
+          </div>
+          <button class="btn btn-green" type="submit" data-i18n="s_submit">Apply for free listing</button>
+          <div class="form-msg" id="submitMsg" role="status"></div>
+          <p class="book-note" data-i18n="s_note">Submitting opens your email app with everything filled in — just press send.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="margin-top:0;border-top:none;padding-top:0">
+        <span>© 2026 Tanzania Pulse</span>
+        <span>Arusha, Tanzania · AFCON 2027</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/listings.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotels in Arusha — Tanzania Pulse</title>
+  <meta name="description" content="Verified hotels in Arusha for AFCON 2027 visitors — city hotels, garden resorts and lodges with direct WhatsApp enquiry." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-cat="hotel">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 4 12 3-9 2 3h5" fill="none" stroke="#FCD116" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Tanzania<span class="accent">Pulse</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="listings.html" class="active" data-i18n="nav_listings">Listings</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="submit.html" class="nav-cta" data-i18n="nav_submit">List your business</a>
+        <button class="lang-toggle" id="langToggle" type="button">SW</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero green">
+      <div class="container">
+        <span class="eyebrow" data-i18n="catp_eyebrow">Category</span>
+        <h1 data-i18n="catp_hotel_title">Hotels in Arusha</h1>
+        <p data-i18n="catp_hotel_desc">From city-centre classics to garden resorts — hand-picked hotels for AFCON 2027 visitors, with breakfast, pools and airport transfers.</p>
+      </div>
+    </section>
+
+    <div class="container search-wrap">
+      <form class="search-bar" id="searchForm">
+        <input type="text" id="searchInput" data-i18n-placeholder="search_ph" placeholder="Search by name, area or service…" autocomplete="off" />
+        <select id="searchCat" aria-label="Category">
+          <option value="all" data-i18n="cat_all">All categories</option>
+          <option value="hotel" data-i18n="cat_hotel">Hotels</option>
+          <option value="apartment" data-i18n="cat_apartment">Apartments</option>
+          <option value="transport" data-i18n="cat_transport">Transport</option>
+          <option value="restaurant" data-i18n="cat_restaurant">Restaurants</option>
+          <option value="experience" data-i18n="cat_experience">Experiences</option>
+        </select>
+        <button class="btn btn-yellow" type="submit" data-i18n="search_btn">Search</button>
+      </form>
+    </div>
+
+    <section id="listings" style="padding-top:2rem">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow" data-i18n="catp_eyebrow">Category</span>
+            <h2 data-i18n="cat_hotel">Hotels</h2>
+          </div>
+          <div class="filter-chips" id="filterChips">
+            <button class="chip" data-cat="all" data-i18n="cat_all">All categories</button>
+            <button class="chip active" data-cat="hotel" data-i18n="cat_hotel">Hotels</button>
+            <button class="chip" data-cat="apartment" data-i18n="cat_apartment">Apartments</button>
+            <button class="chip" data-cat="transport" data-i18n="cat_transport">Transport</button>
+            <button class="chip" data-cat="restaurant" data-i18n="cat_restaurant">Restaurants</button>
+            <button class="chip" data-cat="experience" data-i18n="cat_experience">Experiences</button>
+          </div>
+        </div>
+        <div class="result-count" id="resultCount"></div>
+        <div class="listings-grid" id="listingsGrid"></div>
+        <div style="margin-top:2rem;text-align:center">
+          <a class="btn btn-outline" href="listings.html" data-i18n="catp_viewall">Browse all categories</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="margin-top:0;border-top:none;padding-top:0">
+        <span>© 2026 Tanzania Pulse</span>
+        <span>Arusha, Tanzania · AFCON 2027</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/listings.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/listings-page.js"></script>
+</body>
+</html>

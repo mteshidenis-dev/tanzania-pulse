@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Tanzania Pulse</title>
+  <meta name="description" content="Contact Tanzania Pulse — questions about listings, bookings or partnerships in Arusha for AFCON 2027." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 4 12 3-9 2 3h5" fill="none" stroke="#FCD116" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Tanzania<span class="accent">Pulse</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="listings.html" data-i18n="nav_listings">Listings</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" class="active" data-i18n="nav_contact">Contact</a>
+        <a href="submit.html" class="nav-cta" data-i18n="nav_submit">List your business</a>
+        <button class="lang-toggle" id="langToggle" type="button">SW</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow" data-i18n="contact_eyebrow">Get in touch</span>
+        <h1 data-i18n="contact_title">Contact Tanzania Pulse</h1>
+        <p data-i18n="contact_lead">Questions about a listing, a booking, or anything else? Reach us any of these ways.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <span class="icon">✉️</span>
+            <h3 data-i18n="contact_email_h">Email us</h3>
+            <p data-i18n="contact_email_d">For listings, partnerships and general questions.</p>
+            <a class="value" href="mailto:hello@tanzaniapulse.example">hello@tanzaniapulse.example</a>
+          </div>
+          <div class="contact-card">
+            <span class="icon">💬</span>
+            <h3 data-i18n="contact_wa_h">WhatsApp</h3>
+            <p data-i18n="contact_wa_d">The fastest way to reach us — usually replies within the day.</p>
+            <a class="value" href="https://wa.me/255754000000" target="_blank" rel="noopener">+255 754 000 000</a>
+          </div>
+          <div class="contact-card">
+            <span class="icon">📞</span>
+            <h3 data-i18n="contact_call_h">Call us</h3>
+            <p data-i18n="contact_call_d">Prefer to talk? We're available during working hours.</p>
+            <a class="value" href="tel:+255754000000">+255 754 000 000</a>
+          </div>
+        </div>
+
+        <div class="two-col" style="margin-top:3rem">
+          <div class="prose" style="margin-top:0">
+            <h2 style="margin-top:0" data-i18n="contact_title">Contact Tanzania Pulse</h2>
+            <p data-i18n="contact_lead">Questions about a listing, a booking, or anything else? Reach us any of these ways.</p>
+          </div>
+
+          <form class="form-card" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="c_name" data-i18n="form_name">Your name</label>
+              <input type="text" id="c_name" name="c_name" required />
+            </div>
+            <div class="form-row">
+              <label for="c_email" data-i18n="form_email">Your email</label>
+              <input type="email" id="c_email" name="c_email" required />
+            </div>
+            <div class="form-row">
+              <label for="c_subject" data-i18n="form_subject">Subject</label>
+              <input type="text" id="c_subject" name="c_subject" />
+            </div>
+            <div class="form-row">
+              <label for="c_message" data-i18n="form_message">Message</label>
+              <textarea id="c_message" name="c_message" required></textarea>
+            </div>
+            <button class="btn btn-green" type="submit" data-i18n="form_send">Send message</button>
+            <div class="form-msg" id="contactMsg" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="margin-top:0;border-top:none;padding-top:0">
+        <span>© 2026 Tanzania Pulse</span>
+        <span>Arusha, Tanzania · AFCON 2027</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/listings.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
