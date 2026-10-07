@@ -22,35 +22,73 @@ function priceWord(cat) {
   return t(PRICE_WORDS[cat] || "per_night");
 }
 
-function listingCard(item) {
+function listingSummary(item) {
+  return currentLang === "sw" ? item.summary_sw : item.summary;
+}
+
+function listingRow(item) {
   const initial = item.name.trim().charAt(0).toUpperCase();
-  const priceWordLabel = priceWord(item.category);
   return `
-    <a class="card" href="listing.html?id=${encodeURIComponent(item.id)}" style="--card-color:${item.imageColor || CAT_COLORS[item.category]}">
-      <div class="card-media">
-        <span class="cat-tag">${catLabel(item.category)}</span>
-        <span class="rating">★ ${item.rating}</span>
-        ${initial}
-      </div>
-      <div class="card-body">
-        <h3>${item.name}</h3>
-        <div class="card-loc">📍 ${item.location}</div>
-        <p class="card-sum">${currentLang === "sw" ? item.summary_sw : item.summary}</p>
-        <div class="card-foot">
-          <div class="price">${t("from")} $${item.price} <small>/ ${priceWordLabel}</small></div>
-          <span class="btn btn-green" style="padding:0.5rem 1rem;font-size:0.82rem">${t("enquire_wa")}</span>
-        </div>
-      </div>
+    <a class="lrow" href="listing.html?id=${encodeURIComponent(item.id)}">
+      <span class="lrow__media cover-art cover--${item.category}" data-mark="${initial}" aria-hidden="true"></span>
+      <span class="lrow__body">
+        <span class="kicker">${catLabel(item.category)} · ${item.location}</span>
+        <span class="lrow__title">${item.name}</span>
+        <span class="lrow__text">${listingSummary(item)}</span>
+        <span class="lrow__meta">
+          <span class="price">${t("from")} $${item.price} <small>/ ${priceWord(item.category)}</small></span>
+          <span class="rating">★ ${item.rating}</span>
+          <span class="more">${t("enquire_wa")} →</span>
+        </span>
+      </span>
     </a>`;
 }
 
-function renderCards(el, items) {
+function listingTile(item) {
+  const initial = item.name.trim().charAt(0).toUpperCase();
+  return `
+    <a class="tile" href="listing.html?id=${encodeURIComponent(item.id)}">
+      <span class="tile__media cover-art cover--${item.category}" data-mark="${initial}" aria-hidden="true"></span>
+      <span class="tile__body">
+        <span class="badge">${catLabel(item.category)}</span>
+        <span class="tile__title">${item.name}</span>
+        <span class="tile__text">${listingSummary(item)}</span>
+        <span class="tile__foot">
+          <span class="price">${t("from")} $${item.price} <small>/ ${priceWord(item.category)}</small></span>
+          <span class="rating">★ ${item.rating}</span>
+        </span>
+      </span>
+    </a>`;
+}
+
+function listingCard(item) {
+  return listingRow(item);
+}
+
+function renderCards(el, items, variant) {
   if (!el) return;
+  const render = variant === "tile" ? listingTile : listingRow;
+  if (variant === "tile") el.classList.add("grid-tiles");
   el.innerHTML = items.length
-    ? items.map(listingCard).join("")
+    ? items.map(render).join("")
     : `<div class="empty-state">${t("list_empty")}</div>`;
 }
 
 document.addEventListener("langchange", () => {
   document.dispatchEvent(new CustomEvent("rerender"));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const topFind = document.getElementById("topFind");
+  if (topFind) {
+    topFind.addEventListener("click", () => {
+      const homeInput = document.getElementById("homeSearchInput");
+      if (homeInput) {
+        homeInput.focus();
+        homeInput.scrollIntoView({ block: "center" });
+      } else {
+        location.href = "listings.html";
+      }
+    });
+  }
 });

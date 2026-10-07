@@ -28,7 +28,7 @@ function detailHTML(item) {
     </div>
 
     <div class="container">
-      <div class="detail-banner" style="--card-color:${item.imageColor}">${initial}</div>
+      <div class="detail-banner cover-art cover--${item.category}" data-mark="${initial}" aria-hidden="true"></div>
 
       <div class="detail-layout">
         <div class="detail-main">
