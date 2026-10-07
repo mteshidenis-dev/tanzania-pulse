@@ -8,20 +8,10 @@
   <meta name="theme-color" content="#087A6A" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Oxygen:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <span class="topbar__tag" data-i18n="top_tagline">Everything Tanzania. One place.</span>
-      <button class="topbar__find" id="topFind" type="button">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <span data-i18n="top_find">What are you looking for?</span>
-      </button>
-    </div>
-  </div>
-
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
@@ -45,193 +35,134 @@
   </header>
 
   <main>
-    <!-- Front page -->
-    <section class="front">
-      <div class="container">
-        <div class="front__head">
-          <h1 class="front__h1" data-i18n="front_eyebrow">Tanzania visitor guide · AFCON 2027</h1>
-          <span class="front__date" id="frontDate"></span>
-        </div>
-
-        <div class="front__grid">
-          <a class="story story--lead cover-art cover--hotel" href="listings.html">
-            <span class="story__body">
-              <span class="badge" data-i18n="lead_badge">Stay · Eat · Explore</span>
-              <span class="story__title" data-i18n="lead_title">Everything you need in Arusha for AFCON 2027</span>
-              <span class="story__text" data-i18n="lead_text">Verified hotels, apartments, transport, restaurants and experiences — reach every business directly on WhatsApp, with no booking fees.</span>
-              <span class="meta meta--light"><strong id="statCount">15</strong> <span data-i18n="stat_services">Services listed</span> · <span data-i18n="stat_free">Free to browse</span></span>
-            </span>
-          </a>
-
-          <a class="story story--side cover-art cover--apartment" href="hotels.html">
-            <span class="story__body">
-              <span class="story__title" data-i18n="side_stay_t">Where to stay</span>
-              <span class="meta meta--light" data-i18n="side_stay_d">Hotels &amp; apartments across Arusha</span>
-            </span>
-          </a>
-
-          <a class="story story--side cover-art cover--restaurant" href="eat.html">
-            <span class="story__body">
-              <span class="story__title" data-i18n="side_eat_t">Where to eat</span>
-              <span class="meta meta--light" data-i18n="side_eat_d">Grills, coffee houses &amp; rooftops</span>
-            </span>
-          </a>
-        </div>
-
-        <div class="search-wrap">
-          <form class="search-bar" id="homeSearch">
-            <input type="text" name="q" id="homeSearchInput" data-i18n-placeholder="search_ph" placeholder="Search by name, area or service…" autocomplete="off" />
-            <select name="cat" id="homeSearchCat" aria-label="Category">
-              <option value="all" data-i18n="cat_all">All categories</option>
-              <option value="hotel" data-i18n="cat_hotel">Hotels</option>
-              <option value="apartment" data-i18n="cat_apartment">Apartments</option>
-              <option value="transport" data-i18n="cat_transport">Transport</option>
-              <option value="restaurant" data-i18n="cat_restaurant">Restaurants</option>
-              <option value="experience" data-i18n="cat_experience">Experiences</option>
-            </select>
-            <button class="btn btn-dark" type="submit" data-i18n="search_btn">Search</button>
-          </form>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="hero-pill" data-i18n="hero_eyebrow">AFCON 2027 · Tanzania</span>
+        <h1 data-i18n="hero_title">Feel the <span class="pop">pulse</span> of Arusha</h1>
+        <p class="hero__sub" data-i18n="hero_lead">Hotels, apartments and transport for AFCON 2027 visitors — all in one place. Browse verified local services and reach them directly on WhatsApp.</p>
+        <div class="hero__ctas">
+          <a class="btn btn-green" href="listings.html" data-i18n="hero_cta1">Browse listings</a>
+          <a class="btn btn-ghost" href="submit.html" data-i18n="nav_submit">List your business</a>
         </div>
       </div>
     </section>
 
-    <!-- Topic chips -->
-    <div class="topics">
-      <div class="container topics__inner">
-        <span class="topics__label" data-i18n="footer_explore">Explore</span>
-        <div class="topics__chips">
-          <a class="chip active" href="listings.html"><em data-i18n="cat_all">All categories</em> <span id="totalCount">15</span></a>
-          <a class="chip" href="hotels.html"><em data-i18n="cat_hotel">Hotels</em> <span data-count-for="hotel">0</span></a>
-          <a class="chip" href="apartments.html"><em data-i18n="cat_apartment">Apartments</em> <span data-count-for="apartment">0</span></a>
-          <a class="chip" href="transport.html"><em data-i18n="cat_transport">Transport</em> <span data-count-for="transport">0</span></a>
-          <a class="chip" href="eat.html"><em data-i18n="cat_restaurant">Restaurants</em> <span data-count-for="restaurant">0</span></a>
-          <a class="chip" href="experiences.html"><em data-i18n="cat_experience">Experiences</em> <span data-count-for="experience">0</span></a>
-        </div>
-      </div>
+    <!-- Floating search -->
+    <div class="container search-wrap">
+      <form class="search-card" id="homeSearch">
+        <input type="text" name="q" id="homeSearchInput" data-i18n-placeholder="search_ph" placeholder="Search by name, area or service…" autocomplete="off" />
+        <select name="cat" id="homeSearchCat" aria-label="Category">
+          <option value="all" data-i18n="cat_all">All categories</option>
+          <option value="hotel" data-i18n="cat_hotel">Hotels</option>
+          <option value="apartment" data-i18n="cat_apartment">Apartments</option>
+          <option value="transport" data-i18n="cat_transport">Transport</option>
+          <option value="restaurant" data-i18n="cat_restaurant">Restaurants</option>
+          <option value="experience" data-i18n="cat_experience">Experiences</option>
+        </select>
+        <button class="btn btn-green" type="submit" data-i18n="search_btn">Search</button>
+      </form>
     </div>
 
-    <!-- Featured + sidebar -->
-    <section class="section" id="featured">
-      <div class="container layout">
-        <div class="layout__main">
-          <div class="section__head">
-            <div>
-              <span class="eyebrow" data-i18n="feat_eyebrow">Popular right now</span>
-              <h2 class="section__title" data-i18n="feat_title">Featured services</h2>
-            </div>
-            <a class="more" href="listings.html" data-i18n="feat_viewall">View all listings</a>
-          </div>
-          <div class="listings-grid" id="featuredGrid"></div>
-          <p class="mt-block"><a class="btn btn-outline btn-sm" href="listings.html" data-i18n="feat_viewall">View all listings</a></p>
-        </div>
-
-        <aside class="layout__side">
-          <div class="widget">
-            <h3 class="widget__title" data-i18n="picks_title">Most wanted</h3>
-            <ol class="ranked" id="picksList"></ol>
-          </div>
-
-          <div class="widget widget--brand">
-            <h3 data-i18n="afcon_title">Tanzania 2027</h3>
-            <p data-i18n="afcon_text">Coming for the football. Stay for the experience.</p>
-            <a class="btn btn-gold btn-sm" href="listings.html" data-i18n="afcon_cta">Explore listings</a>
-          </div>
-
-          <div class="widget">
-            <h3 class="widget__title" data-i18n="quick_title">Popular searches</h3>
-            <div class="quick-chips">
-              <a class="chip" href="listings.html?cat=hotel" data-i18n="quick_1">Stays in Arusha</a>
-              <a class="chip" href="listings.html?cat=transport&amp;q=airport" data-i18n="quick_2">Airport transfers</a>
-              <a class="chip" href="listings.html?q=safari" data-i18n="quick_3">Safari day trips</a>
-              <a class="chip" href="listings.html?q=nyama" data-i18n="quick_4">Nyama choma</a>
-              <a class="chip" href="listings.html?q=kilimanjaro" data-i18n="quick_5">Kilimanjaro hikes</a>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Stay & eat -->
-    <section class="section section--sand" id="stayeat">
+    <!-- Categories -->
+    <section class="section" id="categories">
       <div class="container">
         <div class="section__head">
           <div>
             <span class="eyebrow" data-i18n="cat_eyebrow">What are you looking for?</span>
-            <h2 class="section__title" data-i18n="stayeat_title">Where to stay &amp; eat</h2>
+            <h2 class="section__title" data-i18n="cat_title">Pick a category</h2>
           </div>
-          <a class="more" href="listings.html" data-i18n="catp_viewall">Browse all categories</a>
+          <a class="more" href="listings.html" data-i18n="catp_viewall">Browse all categories →</a>
         </div>
-
-        <div class="stay">
-          <a class="stay__card cover-art cover--hotel" href="hotels.html">
-            <span class="stay__body">
-              <span class="stay__count"><span data-count-for="hotel">0</span> <span data-i18n="list_count">listings</span></span>
-              <strong data-i18n="cat_hotel">Hotels</strong>
-              <span class="last" data-i18n="cat_hotel_desc">City hotels and lodges with breakfast, pools and match-day transfers.</span>
+        <div class="categories">
+          <a class="cat-tile" href="hotels.html">
+            <span class="cat-tile__icon cover--hotel">🏨</span>
+            <span class="cat-tile__body">
+              <span class="cat-tile__name" data-i18n="cat_hotel">Hotels</span>
+              <span class="cat-tile__count"><span data-count-for="hotel">0</span> <span data-i18n="list_count">listings</span></span>
             </span>
+            <span class="cat-tile__arrow">→</span>
           </a>
-          <a class="stay__card cover-art cover--restaurant" href="eat.html">
-            <span class="stay__body">
-              <span class="stay__count"><span data-count-for="restaurant">0</span> <span data-i18n="list_count">listings</span></span>
-              <strong data-i18n="cat_restaurant">Restaurants</strong>
-              <span class="last" data-i18n="cat_restaurant_desc">Grills, coffee houses and rooftops — where fans and locals actually eat.</span>
+          <a class="cat-tile" href="apartments.html">
+            <span class="cat-tile__icon cover--apartment">🛋️</span>
+            <span class="cat-tile__body">
+              <span class="cat-tile__name" data-i18n="cat_apartment">Apartments</span>
+              <span class="cat-tile__count"><span data-count-for="apartment">0</span> <span data-i18n="list_count">listings</span></span>
             </span>
+            <span class="cat-tile__arrow">→</span>
           </a>
-        </div>
-
-        <div class="stay__quick">
-          <span class="label" data-i18n="footer_explore">Explore</span>
-          <a class="chip" href="apartments.html"><em data-i18n="cat_apartment">Apartments</em> <span data-count-for="apartment">0</span></a>
-          <a class="chip" href="transport.html"><em data-i18n="cat_transport">Transport</em> <span data-count-for="transport">0</span></a>
-          <a class="chip" href="experiences.html"><em data-i18n="cat_experience">Experiences</em> <span data-count-for="experience">0</span></a>
+          <a class="cat-tile" href="transport.html">
+            <span class="cat-tile__icon cover--transport">🚐</span>
+            <span class="cat-tile__body">
+              <span class="cat-tile__name" data-i18n="cat_transport">Transport</span>
+              <span class="cat-tile__count"><span data-count-for="transport">0</span> <span data-i18n="list_count">listings</span></span>
+            </span>
+            <span class="cat-tile__arrow">→</span>
+          </a>
+          <a class="cat-tile" href="eat.html">
+            <span class="cat-tile__icon cover--restaurant">🍽️</span>
+            <span class="cat-tile__body">
+              <span class="cat-tile__name" data-i18n="cat_restaurant">Restaurants</span>
+              <span class="cat-tile__count"><span data-count-for="restaurant">0</span> <span data-i18n="list_count">listings</span></span>
+            </span>
+            <span class="cat-tile__arrow">→</span>
+          </a>
+          <a class="cat-tile" href="experiences.html">
+            <span class="cat-tile__icon cover--experience">🦁</span>
+            <span class="cat-tile__body">
+              <span class="cat-tile__name" data-i18n="cat_experience">Experiences</span>
+              <span class="cat-tile__count"><span data-count-for="experience">0</span> <span data-i18n="list_count">listings</span></span>
+            </span>
+            <span class="cat-tile__arrow">→</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Experiences -->
-    <section class="section" id="experiences">
+    <!-- Featured -->
+    <section class="section section--white" id="featured">
       <div class="container">
         <div class="section__head">
           <div>
-            <span class="eyebrow" data-i18n="cat_experience">Experiences</span>
-            <h2 class="section__title" data-i18n="exp_title">Things to do between matches</h2>
+            <span class="eyebrow" data-i18n="feat_eyebrow">Popular right now</span>
+            <h2 class="section__title" data-i18n="feat_title">Featured services</h2>
           </div>
-          <a class="more" href="experiences.html" data-i18n="feat_viewall">View all listings</a>
+          <a class="more" href="listings.html" data-i18n="feat_viewall">View all listings →</a>
         </div>
-        <div class="listings-grid" id="expGrid"></div>
+        <div class="listings-grid" id="featuredGrid"></div>
       </div>
     </section>
 
-    <!-- Why -->
-    <section class="section why" id="why">
+    <!-- How it works -->
+    <section class="section" id="how">
       <div class="container">
         <div class="section__head">
           <div>
             <span class="eyebrow" data-i18n="why_eyebrow">Why Tanzania Pulse</span>
-            <h2 class="section__title" data-i18n="why_title">Built for match day</h2>
+            <h2 class="section__title" data-i18n="how_title">How it works</h2>
           </div>
         </div>
         <div class="steps">
           <div class="step-card">
-            <span class="num">01</span>
-            <h3 data-i18n="why_1_t">No booking fees</h3>
-            <p data-i18n="why_1_d">You contact the business directly — WhatsApp or call. We never add a hidden charge to your stay or ride.</p>
+            <span class="num">1</span>
+            <h3 data-i18n="how_1_t">Browse</h3>
+            <p data-i18n="how_1_d">Search verified hotels, apartments and transport services in Arusha by category, price or area.</p>
           </div>
           <div class="step-card">
-            <span class="num">02</span>
-            <h3 data-i18n="why_2_t">Local &amp; verified</h3>
-            <p data-i18n="why_2_d">Every listing is a real Arusha business. We verify locations, photos and contacts before publishing.</p>
+            <span class="num">2</span>
+            <h3 data-i18n="how_2_t">Contact directly</h3>
+            <p data-i18n="how_2_d">Message the business on WhatsApp, call, or email — you always talk to the owner, never a middleman.</p>
           </div>
           <div class="step-card">
-            <span class="num">03</span>
-            <h3 data-i18n="why_3_t">EN &amp; SW friendly</h3>
-            <p data-i18n="why_3_d">Browse in English or Kiswahili. Local hosts and international fans speak the same language here.</p>
+            <span class="num">3</span>
+            <h3 data-i18n="how_3_t">Agree &amp; enjoy</h3>
+            <p data-i18n="how_3_d">Confirm availability and price directly with the business, pay them your way, then enjoy Arusha.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Owner band -->
+    <!-- Owner CTA -->
     <section class="owner-band" id="owners">
       <div class="container">
         <div class="owner-cta">
@@ -239,7 +170,7 @@
             <h2 data-i18n="owner_title">Own a hotel, apartment or fleet in Arusha?</h2>
             <p data-i18n="owner_desc">Get listed on Tanzania Pulse before AFCON 2027 and reach thousands of visiting fans. Early listings are completely free.</p>
           </div>
-          <a class="btn btn-dark" href="submit.html" data-i18n="owner_btn">Get listed free</a>
+          <a class="btn btn-gold" href="submit.html" data-i18n="owner_btn">Get listed free</a>
         </div>
       </div>
     </section>
@@ -294,32 +225,9 @@
       const featured = LISTINGS.filter((l) => l.featured).slice(0, 6);
       renderCards(document.getElementById("featuredGrid"), featured);
 
-      const exp = LISTINGS.filter((l) => l.category === "experience").slice(0, 3);
-      renderCards(document.getElementById("expGrid"), exp, "tile");
-
-      const stat = document.getElementById("statCount");
-      if (stat) stat.textContent = LISTINGS.length;
-
-      const total = document.getElementById("totalCount");
-      if (total) total.textContent = LISTINGS.length;
-
       document.querySelectorAll("[data-count-for]").forEach((el) => {
         el.textContent = LISTINGS.filter((l) => l.category === el.dataset.countFor).length;
       });
-
-      const dateEl = document.getElementById("frontDate");
-      if (dateEl) {
-        const loc = currentLang === "sw" ? "sw-TZ" : "en-GB";
-        dateEl.textContent = new Date().toLocaleDateString(loc, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
-      }
-
-      const picks = [...LISTINGS].sort((a, b) => b.rating - a.rating).slice(0, 5);
-      const picksList = document.getElementById("picksList");
-      if (picksList) {
-        picksList.innerHTML = picks
-          .map((p) => `<li><a href="listing.html?id=${encodeURIComponent(p.id)}"><span class="kicker">${catLabel(p.category)}</span><strong>${p.name}</strong></a></li>`)
-          .join("");
-      }
 
       document.getElementById("homeSearch").addEventListener("submit", (e) => {
         e.preventDefault();
@@ -330,18 +238,7 @@
     });
 
     document.addEventListener("rerender", () => {
-      const loc = currentLang === "sw" ? "sw-TZ" : "en-GB";
-      const dateEl = document.getElementById("frontDate");
-      if (dateEl) dateEl.textContent = new Date().toLocaleDateString(loc, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
       renderCards(document.getElementById("featuredGrid"), LISTINGS.filter((l) => l.featured).slice(0, 6));
-      renderCards(document.getElementById("expGrid"), LISTINGS.filter((l) => l.category === "experience").slice(0, 3), "tile");
-      const picks = [...LISTINGS].sort((a, b) => b.rating - a.rating).slice(0, 5);
-      const picksList = document.getElementById("picksList");
-      if (picksList) {
-        picksList.innerHTML = picks
-          .map((p) => `<li><a href="listing.html?id=${encodeURIComponent(p.id)}"><span class="kicker">${catLabel(p.category)}</span><strong>${p.name}</strong></a></li>`)
-          .join("");
-      }
     });
   </script>
 </body>

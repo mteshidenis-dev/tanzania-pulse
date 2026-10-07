@@ -9,6 +9,8 @@ const I18N = {
     nav_owners: "List your business",
 
     hero_title: 'Feel the <span class="pop">pulse</span> of Arusha',
+    hero_eyebrow: "AFCON 2027 · Tanzania",
+    hero_cta1: "Browse listings",
     hero_lead:
       "Hotels, apartments and transport for AFCON 2027 visitors — all in one place. Browse verified local services and reach them directly on WhatsApp.",
     stat_services: "Services listed",
@@ -189,6 +191,8 @@ const I18N = {
     nav_owners: "Sajili biashara yako",
 
     hero_title: 'Pata <span class="pop">mdundo</span> wa Arusha',
+    hero_eyebrow: "AFCON 2027 · Tanzania",
+    hero_cta1: "Vinjari orodha",
     hero_lead:
       "Hoteli, apartimenti na usafiri kwa wageni wa AFCON 2027 — mahali pamoja. Tazama huduma za wenyeji halisi na wasiliane nao moja kwa moja kwa WhatsApp.",
     stat_services: "Huduma zilizoorodheshwa",

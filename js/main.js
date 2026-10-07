@@ -1,9 +1,17 @@
 const CAT_COLORS = {
   hotel: "#087A6A",
-  apartment: "#1B5E7A",
-  transport: "#D9A441",
-  restaurant: "#C0392B",
-  experience: "#111111"
+  apartment: "#2563EB",
+  transport: "#D97706",
+  restaurant: "#E11D48",
+  experience: "#7C3AED"
+};
+
+const CAT_ICONS = {
+  hotel: "🏨",
+  apartment: "🛋️",
+  transport: "🚐",
+  restaurant: "🍽️",
+  experience: "🦁"
 };
 
 const PRICE_WORDS = {
@@ -27,10 +35,9 @@ function listingSummary(item) {
 }
 
 function listingRow(item) {
-  const initial = item.name.trim().charAt(0).toUpperCase();
   return `
     <a class="lrow" href="listing.html?id=${encodeURIComponent(item.id)}">
-      <span class="lrow__media cover-art cover--${item.category}" data-mark="${initial}" aria-hidden="true"></span>
+      <span class="lrow__media cover-art cover--${item.category}" data-mark="${CAT_ICONS[item.category] || "•"}" aria-hidden="true"></span>
       <span class="lrow__body">
         <span class="kicker">${catLabel(item.category)} · ${item.location}</span>
         <span class="lrow__title">${item.name}</span>
@@ -38,17 +45,15 @@ function listingRow(item) {
         <span class="lrow__meta">
           <span class="price">${t("from")} $${item.price} <small>/ ${priceWord(item.category)}</small></span>
           <span class="rating">★ ${item.rating}</span>
-          <span class="more">${t("enquire_wa")} →</span>
         </span>
       </span>
     </a>`;
 }
 
 function listingTile(item) {
-  const initial = item.name.trim().charAt(0).toUpperCase();
   return `
     <a class="tile" href="listing.html?id=${encodeURIComponent(item.id)}">
-      <span class="tile__media cover-art cover--${item.category}" data-mark="${initial}" aria-hidden="true"></span>
+      <span class="tile__media cover-art cover--${item.category}" data-mark="${CAT_ICONS[item.category] || "•"}" aria-hidden="true"></span>
       <span class="tile__body">
         <span class="badge">${catLabel(item.category)}</span>
         <span class="tile__title">${item.name}</span>
@@ -76,19 +81,4 @@ function renderCards(el, items, variant) {
 
 document.addEventListener("langchange", () => {
   document.dispatchEvent(new CustomEvent("rerender"));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const topFind = document.getElementById("topFind");
-  if (topFind) {
-    topFind.addEventListener("click", () => {
-      const homeInput = document.getElementById("homeSearchInput");
-      if (homeInput) {
-        homeInput.focus();
-        homeInput.scrollIntoView({ block: "center" });
-      } else {
-        location.href = "listings.html";
-      }
-    });
-  }
 });
